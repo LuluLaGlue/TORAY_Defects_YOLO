@@ -7,11 +7,13 @@ import torch
 import torch.backends.cudnn as cudnn
 
 from models.experimental import attempt_load
-from utils.datasets import LoadStreams, LoadImages
-from utils.general import check_img_size, check_requirements, check_imshow, non_max_suppression, apply_classifier, \
-    scale_coords, xyxy2xywh, strip_optimizer, set_logging, increment_path, save_one_box
+from utils.datasets import LoadImages, LoadStreams
+from utils.general import (apply_classifier, check_img_size, check_imshow,
+                           check_requirements, increment_path,
+                           non_max_suppression, save_one_box, scale_coords,
+                           set_logging, strip_optimizer, xyxy2xywh)
 from utils.plots import colors, plot_one_box
-from utils.torch_utils import select_device, load_classifier, time_synchronized
+from utils.torch_utils import load_classifier, select_device, time_synchronized
 
 
 @torch.no_grad()
@@ -31,10 +33,10 @@ def detect(weights='yolov5s.pt',  # model.pt path(s)
            agnostic_nms=False,  # class-agnostic NMS
            augment=False,  # augmented inference
            update=False,  # update all models
-           project='map-defects',  # save results to project/name                   Needs to be empty
-           # save results to project/name                              Needs to be set map-defects
+           project='map-defects',  # save results to project/name
+           # save results to project/name
            name='',
-           # existing project/name ok, do not increment                             Needs to be set at True
+           # existing project/name ok, do not increment
            exist_ok=True,
            line_thickness=3,  # bounding box thickness (pixels)
            hide_labels=False,  # hide labels
@@ -176,7 +178,7 @@ def detect(weights='yolov5s.pt',  # model.pt path(s)
                             w = int(vid_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
                             h = int(vid_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
                         else:  # stream
-                            fps, w, h = 30, im0.shape[1], im0.shape[0]
+                            fps, w, h = 12, im0.shape[1], im0.shape[0]
                             save_path += '.mp4'
                         vid_writer = cv2.VideoWriter(
                             save_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
