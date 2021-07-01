@@ -17,3 +17,16 @@ To create a new model run <code>python ./algo/train.py --img img_size --batch ba
 To use the previsouly trained model run <code>python detect.py --weights path/to/best/weights --img img_size --conf confidence_threshold --source img_source --save-crop --exist-ok</code> <br />
 
 The weights created in training mode can be found in <code>./algo/runs/train/exp/weights</code>. The result are located in <code>./map-defects/</code>
+
+# Exemple
+
+There is a pretrained model in <code>algo/runs/train/exp</code>, that we trained using a mask detection dataset. To run it: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- install <code>motion</code> with <code>sudo apt-get install motion</code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <code>mkdir ~/.motion</code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <code>nano ~/.motion/motion.conf</code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- add the following lines:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- webcam_port 8081
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- webcam_localhost off
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- in a new terminal run <code>motion</code> and leave it open
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- cd into <code>algo</code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- run <code>python detect.py --weights ./runs/train/exp/weights/best.pt --img 416 --conf 0.7 --source http://localhost:8081 --save-crop --exist-ok</code>

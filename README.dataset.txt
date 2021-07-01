@@ -1,27 +1,28 @@
-# Raccoon > raw
-https://public.roboflow.ai/object-detection/raccoon
+# Mask Wearing > 416x416-black-padding
+https://public.roboflow.ai/object-detection/mask-wearing
 
-Provided by [Dat Tran](https://dat-tran.com)
-License: MIT
+Provided by [Joseph Nelson](https://twitter.com/josephofiowa)
+License: Public Domain
 
 # Overview
 
-This dataset contains 196 images of raccoons and 213 bounding boxes (some images have two raccoons). This is a single class problem, and images vary in dimensions. It's a great first dataset for getting started with object detection.
+The `Mask Wearing` dataset is an object detection dataset of individuals wearing various types of masks and those without masks. The images were originally collected by Cheng Hsun Teng from Eden Social Welfare Foundation, Taiwan and relabled by the Roboflow team.
 
-This dataset was originally collected by [Dat Tran](https://github.com/datitran/raccoon_dataset), released with MIT license, and posted here with his permission.
-
-![Raccoon Example](https://i.imgur.com/cRQJ1PB.png)
-
-Per Roboflow's Dataset Health Check, here's how images vary in size:
-
-![Raccoon Aspect Ratio](https://i.imgur.com/sXc3iAF.png)
+Example image (some with masks, some without):
+![Example Image](https://i.imgur.com/Z2yQ4YC.png)
 
 # Use Cases
 
-Find raccoons!
+One could use this dataset to build a system for detecting if an individual is wearing a mask in a given photo.
 
-This dataset is a great starter dataset for building an object detection model. Dat has written a comprehensive tutorial [here](https://github.com/datitran/object_detector_app).
+# Using this Dataset
 
-# Getting Started
+Use the `fork` button to copy this dataset to your own Roboflow account and export it with new preprocessing settings (perhaps resized for your model's desired format or converted to grayscale), or additional augmentations to make your model generalize better. 
 
-Fork or download this dataset and follow Dat's [tutorial](https://towardsdatascience.com/building-a-real-time-object-recognition-app-with-tensorflow-and-opencv-b7a2b4ebdc32) for more.
+# About Roboflow
+
+[Roboflow](https://roboflow.ai) makes managing, preprocessing, augmenting, and versioning datasets for computer vision seamless.
+
+Developers reduce 50% of their code when using Roboflow's workflow, automate annotation quality assurance, save training time, and increase model reproducibility.
+
+#### [![Roboflow Workmark](https://i.imgur.com/WHFqYSJ.png =350x)](https://roboflow.ai)
