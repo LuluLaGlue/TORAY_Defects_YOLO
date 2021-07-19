@@ -4,6 +4,8 @@ This folder contains the YOLO algorithm used for defect monitoring.
 Run <code>pip install -U -r algo/requirements.txt</code> ton install dependencies
 
 # Dataset
+### Video Source for Training
+To split videos into frames palce them in <code>utilities</code> and run <code>split_video.py</code>. The resulting frames are located in <code>utilities/img</code>.<br />
 Use <url>https://blog.roboflow.com/cvat/</url> to annotate your data and <url>https://roboflow.com/</code> to create a dataset.
 ### Roboflow
 When you download your dataset from roboflow please use YOLOv5 PyTorch format.
