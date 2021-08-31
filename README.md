@@ -22,3 +22,7 @@ To create a new model run <code>python ./algo/train.py --img img_size --batch ba
 To use the previsouly trained model run <code>python detect.py --weights path/to/best/weights --img img_size --conf confidence_threshold --source img_source --save-crop --exist-ok --project folder_to_save</code> <br />
 
 The weights created in training mode can be found in <code>./algo/runs/train/exp/weights</code>. The result are located in <code>./algo/runs/detect/expRunNbr/</code> or <code>folder_to_save</code> if mentionned.
+
+
+### ***Contact***
+* This repository was created and maintained by <a href="https://github.com/LuluLaGlue">Lucien SIGAYRET</a> feal free to contact me.
